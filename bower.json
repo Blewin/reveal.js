@@ -11,7 +11,9 @@
     "plugin/zoom-js/zoom.js",
     "plugin/highlight/highlight.js",
     "plugin/markdown/marked.js",
-    "plugin/markdown/markdown.js"
+    "plugin/markdown/markdown.js",
+    "css/reveal.min.css",
+    "css/theme/default.css"
   ],
   "license": "MIT",
   "ignore": [

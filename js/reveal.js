@@ -351,6 +351,9 @@ var Reveal = (function(){
 	 * not found, it is created.
 	 */
 	function setupDOM() {
+		//Add reveal class to body and html
+		document.className = document.className + ' reveal';
+		document.body.className = document.body.className + ' reveal';
 
 		// Cache references to key DOM elements
 		dom.theme = document.querySelector( '#theme' );
