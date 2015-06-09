@@ -1,6 +1,6 @@
 {
-  "name": "reveal.js",
-  "version": "2.6.5",
+  "name": "reveal.js-toggable",
+  "version": "2.6.6",
   "homepage": "https://github.com/Blewin/reveal.js",
   "authors": [
     "Hakim El Hattab (http://hakim.se)"
