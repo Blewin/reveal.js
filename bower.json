@@ -1,7 +1,7 @@
 {
   "name": "reveal.js",
-  "version": "2.6.2",
-  "homepage": "https://github.com/judsonbsilva/reveal.js",
+  "version": "2.6.5",
+  "homepage": "https://github.com/Blewin/reveal.js",
   "authors": [
     "Hakim El Hattab (http://hakim.se)"
   ],
@@ -11,9 +11,7 @@
     "plugin/zoom-js/zoom.js",
     "plugin/highlight/highlight.js",
     "plugin/markdown/marked.js",
-    "plugin/markdown/markdown.js",
-    "css/reveal.min.css",
-    "css/theme/default.css"
+    "plugin/markdown/markdown.js"
   ],
   "license": "MIT",
   "ignore": [
