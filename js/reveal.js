@@ -169,6 +169,10 @@ var Reveal = (function(){
 		autoSlideStartTime = -1,
 		autoSlidePaused = false,
 
+		// Storing old class names, for reverting capabilities
+		oldDocumentClassName,
+		oldBodyClassName,
+
 		// Holds information about the currently ongoing touch input
 		touch = {
 			startX: 0,
@@ -351,10 +355,6 @@ var Reveal = (function(){
 	 * not found, it is created.
 	 */
 	function setupDOM() {
-		//Add reveal class to body and html
-		document.className = document.className + ' reveal';
-		document.body.className = document.body.className + ' reveal';
-
 		// Cache references to key DOM elements
 		dom.theme = document.querySelector( '#theme' );
 		dom.wrapper = document.querySelector( '.reveal' );
@@ -3379,6 +3379,19 @@ var Reveal = (function(){
 			if( 'addEventListener' in window ) {
 				( dom.wrapper || document.querySelector( '.reveal' ) ).removeEventListener( type, listener, useCapture );
 			}
+		},
+		//add global css classes
+		enable: function() {
+			//Add reveal class to body and html
+			oldDocumentClassName = document.className;
+			oldBodyClassName = document.body.className;
+			document.className = oldDocumentClassName + ' revealHTML';
+			document.body.className = oldBodyClassName + ' revealBODY';
+		},
+		//remove the global css classes
+		disable: function() {
+			document.className = oldDocumentClassName;
+			document.body.className = oldBodyClassName;
 		}
 	};
 
